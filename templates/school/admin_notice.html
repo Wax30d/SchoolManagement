@@ -2,12 +2,10 @@
 {% load widget_tweaks %}
 
 
-
-
 {% block content %}
 
 <head>
-  <style media="screen">
+    <style media="screen">
     a:link {
       text-decoration: none;
     }
@@ -41,39 +39,40 @@
       background: #4caf50;
       color: #fff;
     }
-  </style>
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </style>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
 <!------ notice page for  by admin(sumit)  ---------->
 <form method="post">
-  {% csrf_token %}
-  <div class="container register-form">
-    <div class="form">
-      <div class="note">
-        <p>Announce Something</p>
-      </div>
-
-      <div class="form-content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              {% render_field form.message class="form-control" placeholder="Write Your Message Here" %}
+    {% csrf_token %}
+    <div class="container register-form">
+        <div class="form">
+            <div class="note">
+                <p>Announce Something</p>
             </div>
-            <div class="form-group">
-              {% render_field form.by type="hidden"  class="form-control" placeholder="Your Name" %}
-            </div>
-          </div>
 
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            {% render_field form.message class="form-control" placeholder="Write Your Message Here" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form.by type="hidden" class="form-control" placeholder="Your Name" %}
+                        </div>
+                    </div>
+
+                </div>
+                <button type="submit" class="btnSubmit">Submit</button>
+            </div>
         </div>
-        <button type="submit" class="btnSubmit">Submit</button>
-      </div>
     </div>
-  </div>
 
 </form>
 

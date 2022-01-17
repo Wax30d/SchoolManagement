@@ -4,10 +4,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SMS - Django</title>
-  <style type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SMS - Django</title>
+    <style type="text/css">
     body {
       color: #aa082e;
       background-color: #b6bde7;
@@ -46,79 +46,72 @@
       background: #4caf50;
       color: #fff;
     }
-  </style>
+
+    </style>
 
 </head>
 
 
 <body>
-  {% include "school/navbar.html" %}
-  <br>
-  <br>
-  <br>
-  <br>
+{% include "school/navbar.html" %}
+<br>
+<br>
+<br>
+<br>
 
 
-
-
-  <!--- signup page for teacher by admin(sumit)  ---------->
-  <form method="post">
+<!--- signup page for teacher by admin(sumit)  ---------->
+<form method="post">
     {% csrf_token %}
     <div class="container register-form">
-      <div class="form">
-        <div class="note">
-          <p>New Admission To School</p>
-        </div>
-
-        <div class="form-content">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                {% render_field form1.first_name class="form-control" placeholder="First Name" %}
-              </div>
-              <div class="form-group">
-                {% render_field form1.username class="form-control" placeholder="Username" %}
-              </div>
-              <div class="form-group">
-                {% render_field form2.cl class="form-control" placeholder="Class" %}
-              </div>
-              <div class="form-group">
-                {% render_field form2.mobile class="form-control" placeholder="Contact" %}
-              </div>
-
+        <div class="form">
+            <div class="note">
+                <p>New Admission To School</p>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                {% render_field form1.last_name class="form-control" placeholder="Last Name" %}
-              </div>
-              <div class="form-group">
-                {% render_field form1.password class="form-control" type="password" placeholder="Password" %}
-              </div>
-              <div class="form-group">
-                {% render_field form2.roll class="form-control" placeholder="Roll" %}
-              </div>
-              <div class="form-group">
-                {% render_field form2.fee class="form-control" placeholder="Fee" %}
-              </div>
 
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {% render_field form1.first_name class="form-control" placeholder="First Name" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form1.username class="form-control" placeholder="Username" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form2.cl class="form-control" placeholder="Class" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form2.mobile class="form-control" placeholder="Contact" %}
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {% render_field form1.last_name class="form-control" placeholder="Last Name" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form1.password class="form-control" type="password" placeholder="Password" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form2.roll class="form-control" placeholder="Roll" %}
+                        </div>
+                        <div class="form-group">
+                            {% render_field form2.fee class="form-control" placeholder="Fee" %}
+                        </div>
+
+                    </div>
+                </div>
+                <button type="submit" class="btnSubmit">Take Admission</button>
+                <div class="text-center">Already have an account? <a href="studentlogin">Login here</a></div>
             </div>
-          </div>
-          <button type="submit" class="btnSubmit">Take Admission</button>
-          <div class="text-center">Already have an account? <a href="studentlogin">Login here</a></div>
         </div>
-      </div>
     </div>
 
-  </form>
+</form>
 
 
-
-
-
-
-
-
-  {% include "school/footer.html" %}
+{% include "school/footer.html" %}
 </body>
 
 </html>

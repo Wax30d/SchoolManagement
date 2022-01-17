@@ -2,12 +2,10 @@
 {% load static %}
 
 
-
-
 {% block content %}
 
 <head>
-  <style media="screen">
+    <style media="screen">
     .alert {
       margin-left: 25%;
       margin-right: 25%;
@@ -34,8 +32,9 @@
     .closebtn:hover {
       color: black;
     }
-  </style>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <br>
@@ -44,16 +43,14 @@
 
 <br><br>
 <div class="w3-panel w3-black ">
-  <p>Notice Board</p>
+    <p>Notice Board</p>
 </div><br>
 {%for n in notice%}
 <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  <strong>Posted on {{n.date}} </strong><br><b>By : {{n.by}}</b><br> {{n.message}}
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Posted on {{n.date}} </strong><br><b>By : {{n.by}}</b><br> {{n.message}}
 </div>
 {%endfor%}
-
-
 
 
 {% endblock content %}

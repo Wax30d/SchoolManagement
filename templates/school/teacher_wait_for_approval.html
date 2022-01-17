@@ -3,12 +3,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SMS - Django</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SMS - Django</title>
 
 
-  <style media="screen">
+    <style media="screen">
     .jumbotron {
       margin-top: 0px;
       margin-bottom: 0px;
@@ -21,28 +21,30 @@
     .alert {
       margin: 0px;
     }
-  </style>
+
+    </style>
 
 
 </head>
 
 <body>
-  {% include "school/navbar.html" %}
-  <br>
-  <br>
+{% include "school/navbar.html" %}
+<br>
+<br>
 
-  <div class="jumbotron" style="margin-top: 0px;
+<div class="jumbotron" style="margin-top: 0px;
     margin-bottom: 0px;">
     <h1 class="display-4">Hello {{request.user.first_name}},</h1>
-    <p class="lead">Your Account has not been approved yet!<br><br>Our Administrative Team will be checking it soon. <br><br> You'll get to access the system after the confirmation.</p>
+    <p class="lead">Your Account has not been approved yet!<br><br>Our Administrative Team will be checking it soon.
+        <br><br> You'll get to access the system after the confirmation.</p>
     <hr class="my-4">
     <p>Check Later</p>
     <p class="lead">
-      <a class="btn btn-danger btn-lg" href="/logout" role="button">Logout</a>
+        <a class="btn btn-danger btn-lg" href="/logout" role="button">Logout</a>
     </p>
-  </div>
+</div>
 
-  {% include "school/footer.html" %}
+{% include "school/footer.html" %}
 </body>
 
 </html>

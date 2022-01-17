@@ -3,12 +3,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SMS - Django</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SMS - Django</title>
 
 
-  <style type="text/css">
+    <style type="text/css">
     body {
       color: #aa082e;
       background-color: #b6bde7;
@@ -47,60 +47,55 @@
       background: #4caf50;
       color: #fff;
     }
-  </style>
 
-
-
-
+    </style>
 
 
 </head>
 
 <body>
-  {% include "school/navbar.html" %}
-  <br>
-  <br>
-  <br><br>
+{% include "school/navbar.html" %}
+<br>
+<br>
+<br><br>
 
-  <!--- signup page for teacher by admin(sumit)  ---------->
-  <form method="post">
+<!--- signup page for teacher by admin(sumit)  ---------->
+<form method="post">
     {% csrf_token %}
     <div class="container register-form">
-      <div class="form">
-        <div class="note">
-          <p>Admin Login Page</p>
-        </div>
-
-        <div class="form-content">
-          <div class="row">
-            <div class="col-md-6">
-
-              <div class="form-group">
-                {% render_field form.username class="form-control" placeholder="Username" %}
-              </div>
-
+        <div class="form">
+            <div class="note">
+                <p>Admin Login Page</p>
             </div>
-            <div class="col-md-6">
 
-              <div class="form-group">
-                {% render_field form.password class="form-control" placeholder="Password" %}
-              </div>
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
 
+                        <div class="form-group">
+                            {% render_field form.username class="form-control" placeholder="Username" %}
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            {% render_field form.password class="form-control" placeholder="Password" %}
+                        </div>
+
+                    </div>
+                </div>
+                <button type="submit" class="btnSubmit">Login</button>
+                <div class="text-center">Don't have an account? <a href="adminsignup">SignUp here</a></div>
             </div>
-          </div>
-          <button type="submit" class="btnSubmit">Login</button>
-          <div class="text-center">Don't have an account? <a href="adminsignup">SignUp here</a></div>
         </div>
-      </div>
     </div>
 
-  </form>
+</form>
 
-  <br><br><br>
-  <!--
-written By : sumit kumar
--->
-  {% include "school/footer.html" %}
+<br><br><br>
+
+{% include "school/footer.html" %}
 </body>
 
 </html>

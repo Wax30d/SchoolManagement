@@ -3,10 +3,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>SMS - Django</title>
- 
-  <style media="screen">
+    <meta charset="utf-8">
+    <title>SMS - Django</title>
+
+    <style media="screen">
     a:link {
       text-decoration: none;
     }
@@ -148,36 +148,37 @@
     #check {
       display: none;
     }
-  </style>
+
+    </style>
 
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
 
 </head>
 
 <body>
 
-  <input type="checkbox" id="check">
-  <!--header area start-->
-  <header>
+<input type="checkbox" id="check">
+<!--header area start-->
+<header>
     <label for="check">
-      <i class="fas fa-bars" id="sidebar_btn"></i>
+        <i class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <h3>SMS - Teacher</h3>
+        <h3>SMS - Teacher</h3>
     </div>
     <div class="right_area">
-      <a href="/logout" class="logout_btn">Logout</a>
+        <a href="/logout" class="logout_btn">Logout</a>
     </div>
-  </header>
-  <!--header area end-->
-  <!--sidebar start-->
-  <div class="sidebar">
+</header>
+<!--header area end-->
+<!--sidebar start-->
+<div class="sidebar">
     <center>
 
-      <img src="{% static "images/User0icon.png" %}" class="profile_image" alt="">
-      <h4>{{request.user.first_name}}</h4>
+        <img src="{% static " images/User0icon.png" %}" class="profile_image" alt="">
+        <h4>{{request.user.first_name}}</h4>
 
     </center>
 
@@ -186,12 +187,12 @@
     <a href="/teacher-notice"><i class="fas fa-bullhorn"></i><span>Notice</span></a>
 
 
-  </div>
-  <!--sidebar end-->
+</div>
+<!--sidebar end-->
 
 
-  <!--content start-->
-  <div class="content">
+<!--content start-->
+<div class="content">
     <br><br><br><br><br>
     {% block content %}
 
@@ -200,8 +201,8 @@
 
     <br><br><br>
     {% include "school/footer.html" %}
-  </div>
-  <!--content end-->
+</div>
+<!--content end-->
 
 </body>
 

@@ -1,16 +1,15 @@
 {% extends 'school/adminbase.html' %}
 
 
-
 {% block content %}
 
 <head>
 
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <style media="screen">
+    <style media="screen">
     a:link {
       text-decoration: none;
     }
@@ -22,49 +21,45 @@
     .row {
       margin: 100px;
     }
-  </style>
+
+    </style>
 
 </head>
 
 
-
-
 <div class="container">
 
-  <div class="row">
+    <div class="row">
 
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h6 class="panel-title">Student's Salary</h6>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h6 class="panel-title">Student's Salary</h6>
 
-      </div>
+            </div>
 
-      <table class="table table-hover table-striped table-bordered" id="dev-table">
-        <thead>
+            <table class="table table-hover table-striped table-bordered" id="dev-table">
+                <thead>
 
-          <tr>
-            <th>Student Name</th>
+                <tr>
+                    <th>Student Name</th>
 
-            <th>Fee</th>
+                    <th>Fee</th>
 
-          </tr>
-        </thead>
-        {% for s in students %}
-        <tr>
-          <td> {{s.get_name}}</td>
-          <td>{{s.fee}}</td>
-        </tr>
+                </tr>
+                </thead>
+                {% for s in students %}
+                <tr>
+                    <td> {{s.get_name}}</td>
+                    <td>{{s.fee}}</td>
+                </tr>
 
-        {% endfor %}
-      </table>
+                {% endfor %}
+            </table>
+        </div>
+
+
     </div>
-
-
-  </div>
 </div>
-
-
-
 
 
 {% endblock content %}
