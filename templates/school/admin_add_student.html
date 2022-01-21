@@ -47,7 +47,6 @@
 </head>
 
 
-<!------ signup page for student by admin(sumit)  ---------->
 <form method="post">
     {% csrf_token %}
     <div class="container register-form">
@@ -77,8 +76,7 @@
                             {% render_field form1.last_name class="form-control" placeholder="Last Name" %}
                         </div>
                         <div class="form-group">
-                            {% render_field form1.password class="form-control" type="password" placeholder="Password"
-                            %}
+                            {% render_field form1.password class="form-control" type="password" placeholder="Password" %}
                         </div>
                         <div class="form-group">
                             {% render_field form2.fee class="form-control" placeholder="Fee" %}
